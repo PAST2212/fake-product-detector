@@ -1,4 +1,4 @@
-![AI Driven Counterfeit Detection](media/hero-evidence.html)
+![AI Driven Counterfeit Detection](media/hero_evidence.png)
 
 # Fake Product Detector
 
