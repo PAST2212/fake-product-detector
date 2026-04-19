@@ -123,7 +123,7 @@ Alongside the HTML, you also get a **machine-readable `verdict.json`** (schema-v
 
 ### Sample report
 
-A real investigation of Amazon.de ASIN `B0GQDB5Y1J` (a €19 tankini listed under the shell brand "ZWDC") is bundled in the repo so you can see the exact output without running anything:
+A real investigation of Amazon.de ASIN `B0GQDB5Y1J` (https://www.amazon.de/dp/B0GQDB5Y1J) is bundled in the repo so you can see the exact output without running anything:
 
 - **Live render in your browser:** [B0GQDB5Y1J_report.html](https://htmlpreview.github.io/?https://github.com/PAST2212/fake-product-detector/blob/master/media/samples/B0GQDB5Y1J_report.html)
 - **Source files:** [`media/samples/B0GQDB5Y1J_report.html`](media/samples/B0GQDB5Y1J_report.html) · [`media/samples/B0GQDB5Y1J_verdict.json`](media/samples/B0GQDB5Y1J_verdict.json)
