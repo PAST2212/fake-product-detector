@@ -125,8 +125,9 @@ Alongside the HTML, you also get a **machine-readable `verdict.json`** (schema-v
 
 A real investigation of Amazon.de ASIN `B0GQDB5Y1J` (a €19 tankini listed under the shell brand "ZWDC") is bundled in the repo so you can see the exact output without running anything:
 
-- 👀 **Live render in your browser:** [B0GQDB5Y1J_report.html](https://htmlpreview.github.io/?https://github.com/PAST2212/fake-product-detector/blob/master/media/samples/B0GQDB5Y1J_report.html)
-- 📁 **Source files:** [`media/samples/B0GQDB5Y1J_report.html`](media/samples/B0GQDB5Y1J_report.html) · [`media/samples/B0GQDB5Y1J_verdict.json`](media/samples/B0GQDB5Y1J_verdict.json)
+- **Live render in your browser:** [B0GQDB5Y1J_report.html](https://htmlpreview.github.io/?https://github.com/PAST2212/fake-product-detector/blob/master/media/samples/B0GQDB5Y1J_report.html)
+- 
+- **Source files:** [`media/samples/B0GQDB5Y1J_report.html`](media/samples/B0GQDB5Y1J_report.html) · [`media/samples/B0GQDB5Y1J_verdict.json`](media/samples/B0GQDB5Y1J_verdict.json)
 
 Verdict: **LIKELY COUNTERFEIT · composite score 0.85 · risk HIGH.** The full story behind this case is in [media/medium_article.md](media/medium_article.md).
 
@@ -292,16 +293,6 @@ pip install -r requirements.txt
 ```
 
 Python is required only for the helper scripts (`validate_*.py`, `generate_*.py`). The core agent logic runs entirely within Claude Code via markdown specifications.
-
----
-
-## Read more
-
-- 📰 **Full story** — [media/medium-article.md](media/medium_article.md)
-- 🧩 **Workflow diagram source** — [media/workflow.png](media/workflow.png)
-- 🗺️ **Feature map source** — [media/features.png](media/features.png)
-- 🖼️ **Hero evidence canvas** — [media/hero-evidence.html](media/hero-evidence.html)
-- 🧾 **Verdict summary card** — [media/verdict-hero.html](media/verdict-hero.html)
 
 ---
 
