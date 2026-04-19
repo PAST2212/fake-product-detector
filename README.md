@@ -136,33 +136,7 @@ Verdict: **LIKELY COUNTERFEIT · composite score 0.85 · risk HIGH.** The full s
 
 ### Investigation Pipeline
 
-```
-Input (ASIN or article number)
-        ↓
-Platform Detection
-        ↓
-┌───────────┬────────────┬──────────────┐
-│  Listing  │   Reviews   │   Images     │
-│  (scrapes)│  (German   │  (pHash +    │
-│  price,   │  NLP for   │  reverse     │
-│  sellers,  │  "gefälscht")│  image       │
-│  fulfill.) │             │  search)     │
-└───────────┴────────────┴──────────────┘
-        ↓
-┌─────────────────────┐
-│   Seller Investigator │  ← also runs ethics checklist
-│  (network graph,     │     against config/seller-
-│   account age,       │     ethics-checklist.yaml
-│   FBA/FBM)           │
-└─────────────────────┘
-        ↓
-┌─────────────────────────────┐
-│   Fake Product Classifier    │
-│  (composite score + verdict) │
-└─────────────────────────────┘
-        ↓
-    Verdict JSON + HTML Report
-```
+![Investigation Workflow](media/workflow.png)
 
 ### Agents
 
@@ -319,7 +293,7 @@ Python is required only for the helper scripts (`validate_*.py`, `generate_*.py`
 
 ## Read more
 
-- 📰 **Full story** — [media/medium-article.md](media/medium-article.md)
+- 📰 **Full story** — [media/medium-article.md](media/medium_article.md)
 - 🧩 **Workflow diagram source** — [media/workflow.png](media/workflow.png)
 - 🗺️ **Feature map source** — [media/features.png](media/features.png)
 - 🖼️ **Hero evidence canvas** — [media/hero-evidence.html](media/hero-evidence.html)
