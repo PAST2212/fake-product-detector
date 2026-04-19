@@ -1,3 +1,5 @@
+![AI Driven Counterfeit Detection](media/hero-evidence.html)
+
 # Fake Product Detector
 
 **An AI-powered multi-agent system for detecting counterfeit products on Amazon and OTTO.de marketplaces**
