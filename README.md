@@ -2,7 +2,7 @@
 
 # Fake Product Detector
 
-**A ClaudeCode based, AI-powered multi-agent system for detecting counterfeit products on Amazon and OTTO.de marketplaces**
+**A Claude Code–based, AI-powered multi-agent system for detecting counterfeit products on Amazon and OTTO.de marketplaces**
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-Required-yellow.svg)
@@ -47,7 +47,7 @@ The process back then:
 - **Reactive** — most counterfeit detection happened *after* a brand holder complained, not before a customer was deceived.
 - **Costly** — every deep investigation was hours of human labor plus vendor fees, which made scaling across tens of thousands of sellers economically impossible.
 
-What we built worked, but it did not scale with the marketplace. Every new seller cohort meant more headcount or a bigger vendor bill. Non-compliant Seller on Marketplaces were rarely *only* about counterfeit — it is child-labor supply chains surfacing in audits, extremist or Nazi iconography drifting into catalogs, animal-cruelty flags, sanctioned entities trying to onboard through shell companies. Each of those categories was and is a separate human investigation.
+What we built worked, but it did not scale with the marketplace. Every new seller cohort meant more headcount or a bigger vendor bill. Non-compliant sellers on marketplaces are rarely *only* about counterfeit — they involve child-labor supply chains surfacing in audits, extremist or Nazi iconography drifting into catalogs, animal-cruelty flags, and sanctioned entities trying to onboard through shell companies. Each of those categories is a separate human investigation.
 
 Two things have changed since then: the academic literature on counterfeit detection matured (see [Scientific Foundation](#scientific-foundation)), and AI agents became good enough to *read* a listing page, reverse-search its images across AliExpress and DHgate, run German-language review NLP, and cross-check seller registrations — all in the same reasoning session, for cents per listing.
 
@@ -261,7 +261,7 @@ The scoring framework is based on peer-reviewed research:
 |-------|-------------|------------|
 | Cao, Dewan & Lin (2022) — Identification and Impact of Online Deceptive Counterfeit Products: Evidence from Amazon | Random Forest 83% accuracy | Fake topic NLP, rating distribution |
 | Cheung, She & Liu (2018) — Deep learning-based online counterfeit-seller detection | Image networks +60% improvement | pHash cross-matching |
-| Massey (2023) — Identify Counterfeit Product Reviews or AI Text by Bots on E-commerce Websites | Sentiment mismatch, duplicate clustering |
+| Massey (2023) — Identify Counterfeit Product Reviews or AI Text by Bots on E-commerce Websites | BERT 97% on fake reviews | Sentiment mismatch, duplicate clustering |
 | Soldner (2023) — Combating online consumer fraud and counterfeits: A data science perspective | Cross-platform matching | Image forensics, gray market detection |
 
 ---
