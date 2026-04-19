@@ -20,7 +20,7 @@ This is a system that did not exist when I needed it most.
 
 ## Where this comes from
 
-For years I worked in **Fraud Management at OTTO Group** in Hamburg — one of Europe's largest e-commerce retailers — on the team responsible for detecting non-compliant and counterfeit sellers on the marketplace. The process we used back then was, frankly, brutal:
+I have worked at **OTTO Group** in Hamburg — one of Europe's largest e-commerce retailers — on a project with the team responsible for detecting non-compliant and counterfeit sellers on the OTTO marketplace.
 
 - **Manual review queues.** Analysts worked through flagged listings one by one.
 - **External supplier workflows.** We paid specialist fraud vendors per-seller for background checks that took days.
