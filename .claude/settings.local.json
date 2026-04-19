@@ -35,7 +35,16 @@
       "Bash(:)",
       "Bash(git -C /home/paddy/fake-product-detector status --short)",
       "Bash(git -C /home/paddy/fake-product-detector ls-files verdicts/)",
-      "Bash(git -C /home/paddy/fake-product-detector check-ignore verdicts/B0GQDB5Y1J_report.html)"
+      "Bash(git -C /home/paddy/fake-product-detector check-ignore verdicts/B0GQDB5Y1J_report.html)",
+      "Bash(git -C /home/paddy/fake-product-detector branch --show-current)",
+      "Bash(git -C /home/paddy/fake-product-detector remote -v)",
+      "Bash(git -C /home/paddy/fake-product-detector ls-files docs/samples/)",
+      "Bash(git -C /home/paddy/fake-product-detector status --short docs/samples/)",
+      "Bash(git -C /home/paddy/fake-product-detector log --oneline -5)",
+      "Bash(git -C /home/paddy/fake-product-detector ls-remote --heads master)",
+      "Bash(git -C /home/paddy/fake-product-detector log --oneline --all -- docs/samples/)",
+      "Bash(git -C /home/paddy/fake-product-detector log -1 --name-only)",
+      "Bash(git -C /home/paddy/fake-product-detector ls-remote --heads)"
     ]
   },
   "mcpServers": {}
