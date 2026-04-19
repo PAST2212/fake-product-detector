@@ -1,0 +1,207 @@
+{
+  "asin": "B0GQDB5Y1J",
+  "marketplace": "amazon.de",
+  "product_title": "Bikini Set Damen Zweiteilig V-Ausschnitt Raffung Badeanzug mit Rock Bauchweg Bademode Sexy Strandmode Schwimmset Gepolstert Ohne Bügel Triangel Top für Sommer Strand Urlaub Strandparty",
+  "brand": "ZWDC",
+  "actual_brand": "Generic Chinese factory swimwear template (no real brand; ZWDC is a shell-letter string)",
+  "category": "Fashion > Damen > Bekleidung > Bademode > Bikinis",
+  "seller_id": "A1IBHILCAX8EI9",
+  "primary_seller": "ZWDC ❥50%~80% Rabatt,Überraschung Ladens❥",
+  "verdict": "LIKELY COUNTERFEIT",
+  "confidence": 0.85,
+  "composite_score": 0.85,
+  "risk_category": "HIGH",
+  "buying_verdict": {
+    "decision": "DO NOT PURCHASE",
+    "reason": "Dropshipped generic Chinese swimwear template sold under a shell brand. Identical product available on AliExpress for as little as $6.59 USD vs Amazon EUR 18.98 retail.",
+    "alternatives": "If the style is wanted, source the same template directly from AliExpress at $6.59-$25.39 USD - same product at fraction of price.",
+    "risk_if_purchased": "Recent buyer feedback describes return-fraud (item kept, no refund, buyer pays return shipping). FBA fulfillment masks CN dropship origin at checkout."
+  },
+  "key_finding": "Identical product imagery confirmed on AliExpress ($6.59-$25.39), DHgate, SHEIN, Made-in-China and Alibaba CDN. Per methodology this is a near-definitive counterfeit/dropship signal, especially in the Clothing/Footwear category. The 'ZWDC' brand has no discoverable official website and the seller (Shenzhen entity, 558-SKU incoherent catalog spanning bikinis, fleece jackets, bras and yoga pants) shows the textbook CN-dropshipper shell-brand pattern.",
+  "verdict_rationale": "Composite score 0.85 driven almost entirely by image forensics and seller signals. Cross-platform image match (AliExpress + DHgate + SHEIN + Made-in-China + Alibaba CDN at fractional prices) carries near-definitive weight under counterfeit-methodology, with category upweight applied for Clothing/Footwear. Same imagery is also reused across multiple Amazon ASINs under different brand strings, indicating listing-template reuse. Seller is a Shenzhen entity with a keyword-stuffed name violating Amazon naming policy, 71% positive feedback (23% one-star, well below the 95%/4.5+ baseline for legitimate apparel sellers), buyer complaints describing return-fraud (item kept, no refund), and a 558-SKU catalog spanning unrelated apparel categories. Listing itself is 51 days old with a 26-word keyword-stuffed German title, Hersteller field literally says 'Damen Bademode' (the German for 'women's swimwear'), CN country of origin, FBM dropship pattern. The single 5-star, two-word ('Sehr schön') review provides no statistical signal but is consistent with a fresh-ASIN incentivized seed review.",
+  "confidence_notes": "Confidence capped at 0.85 (down from theoretical ~0.95) because three review-based signals (fake_topic_score, sentiment_mismatch, shared_reviewers) are uninterpretable at n=1 review. Image evidence quality is high (multi-platform, multi-source confirmation) and offsets most of the missing review signal. Per methodology, image match alone is treated as near-definitive in this category.",
+  "scored_signals": {
+    "unauthorized_marketplace_match": {
+      "weight_base": 0.167,
+      "category_upweight_multiplier": 1.25,
+      "weight_used": 0.2088,
+      "value": 1.0,
+      "contribution": 0.2088,
+      "evidence": "Confirmed on AliExpress ($6.59-$25.39), DHgate, SHEIN, Made-in-China, Alibaba CDN, Joom, Ozon/Wildberries, plus long-tail Shopify dropship sites"
+    },
+    "cross_asin_image_sharing": {
+      "weight_used": 0.089,
+      "value": 0.95,
+      "contribution": 0.0845,
+      "evidence": "Same imagery reused across multiple Amazon ASINs under different brand strings"
+    },
+    "seller_network_centrality": {
+      "weight_used": 0.089,
+      "value": 0.85,
+      "contribution": 0.0756,
+      "evidence": "Shenzhen CN entity with 558 SKUs spanning bikinis, fleece jackets, bras, yoga pants, rain ponchos - classic generic-brand CN dropship one-supplier-many-categories pattern"
+    },
+    "account_age": {
+      "weight_used": 0.056,
+      "value": 0.85,
+      "contribution": 0.0476,
+      "evidence": "ASIN listed 51 days ago; only 58 feedbacks/12m for a 558-SKU storefront"
+    },
+    "feedback_score": {
+      "weight_used": 0.056,
+      "value": 0.75,
+      "contribution": 0.042,
+      "evidence": "3.9/5 lifetime, 71% positive 12m, 23% one-star (vs >=95% baseline for legitimate apparel)"
+    },
+    "seller_count": {
+      "weight_used": 0.044,
+      "value": 0.3,
+      "contribution": 0.0132,
+      "evidence": "Single-seller ASIN - lowers hijack risk, raises throwaway-ASIN risk"
+    },
+    "price_variance": {
+      "weight_used": 0.033,
+      "value": 0.5,
+      "contribution": 0.0165,
+      "evidence": "Amazon EUR 18.98 vs AliExpress $6.59-$25.39 - weak signal alone (counterfeits often priced at/above source)"
+    },
+    "fake_topic_score": {
+      "weight_base": 0.222,
+      "value": null,
+      "contribution": 0.0,
+      "evidence": "SKIPPED - n=1 review, statistically uninterpretable"
+    },
+    "sentiment_mismatch": {
+      "weight_base": 0.167,
+      "value": null,
+      "contribution": 0.0,
+      "evidence": "SKIPPED - n=1 review, statistically uninterpretable"
+    },
+    "shared_reviewers": {
+      "weight_base": 0.078,
+      "value": null,
+      "contribution": 0.0,
+      "evidence": "SKIPPED - n=1 review, no graph topology computable"
+    }
+  },
+  "score_breakdown": {
+    "image_signals": 0.2933,
+    "seller_signals": 0.1652,
+    "listing_signals": 0.0297,
+    "review_signals": 0.0,
+    "raw_weighted_sum": 0.4882,
+    "active_weight_total": 0.5758,
+    "normalized_composite_score": 0.85,
+    "category_upweight_applied": "Clothing/Footwear: cross-platform image match weight x1.25"
+  },
+  "risk_flags": [
+    {
+      "flag": "cross_platform_image_match_aliexpress_dhgate_shein",
+      "severity": "HIGH",
+      "detail": "Identical product imagery confirmed on AliExpress ($6.59-$25.39 USD), DHgate, SHEIN, Made-in-China and Alibaba CDN - near-definitive dropship/counterfeit signal per methodology"
+    },
+    {
+      "flag": "image_reused_across_amazon_asins",
+      "severity": "HIGH",
+      "detail": "Same product photography appears under multiple Amazon ASINs with different brand strings - listing-template reuse pattern"
+    },
+    {
+      "flag": "shell_brand_no_official_site",
+      "severity": "HIGH",
+      "detail": "Brand 'ZWDC' has no discoverable official website; random-letter naming consistent with shell-brand dropship sellers"
+    },
+    {
+      "flag": "seller_name_policy_violation",
+      "severity": "HIGH",
+      "detail": "Seller display name 'ZWDC ❥50%~80% Rabatt, Überraschung Ladens❥' contains decorative unicode + promotional/discount text - violates Amazon storefront naming policy and is a hallmark of throwaway CN storefronts"
+    },
+    {
+      "flag": "manufacturer_field_is_generic_keyword",
+      "severity": "HIGH",
+      "detail": "Hersteller='Damen Bademode' and Modellnummer='Damen Bademode' (literally German for 'women's swimwear') - no real manufacturer or model"
+    },
+    {
+      "flag": "obscure_brand_keyword_stuffed_title",
+      "severity": "HIGH",
+      "detail": "26-word German keyword-salad title; classic CN-Amazon SEO pattern"
+    },
+    {
+      "flag": "incoherent_558_sku_catalog",
+      "severity": "HIGH",
+      "detail": "Seller catalog spans bikinis, fleece jackets, push-up bras, yoga pants, rain ponchos - one-supplier-many-categories pattern characteristic of generic-brand dropshipping, not a real fashion label"
+    },
+    {
+      "flag": "cn_seller_eu_storefront",
+      "severity": "MEDIUM",
+      "detail": "Legal entity in Shenzhen (518109 Guangdong); only thin German VAT registration; yeah.net free Chinese consumer email as sole business contact"
+    },
+    {
+      "flag": "low_feedback_quality",
+      "severity": "MEDIUM",
+      "detail": "3.9/5 lifetime, 71% positive 12m, 23% one-star - well below 95%/4.5+ baseline for legitimate apparel sellers"
+    },
+    {
+      "flag": "buyer_return_fraud_complaints",
+      "severity": "MEDIUM",
+      "detail": "Recent 1-star feedback describes item kept, no refund issued, buyer pays return shipping - classic CN dropship return-fraud signature"
+    },
+    {
+      "flag": "exif_metadata_stripped",
+      "severity": "MEDIUM",
+      "detail": "All hi-res images have 0 EXIF tags - consistent with scraped supplier-portal images, not original studio photography"
+    },
+    {
+      "flag": "country_of_origin_china_with_unknown_brand",
+      "severity": "MEDIUM",
+      "detail": "Made in China + obscure brand + DE marketplace = high counterfeit base rate for fashion category"
+    },
+    {
+      "flag": "very_new_listing_low_review_volume",
+      "severity": "MEDIUM",
+      "detail": "Listing 51 days old with only 1 review (5-star, two-word body 'Sehr schön') - consistent with fresh ASIN seeded with incentivized review"
+    },
+    {
+      "flag": "fbm_dropship_origin_masked_by_fba",
+      "severity": "LOW",
+      "detail": "ASIN currently ships via FBA which masks underlying CN dropship supply chain at checkout"
+    }
+  ],
+  "evidence_summary": {
+    "for_authentic": [
+      "Single existing review is 5-star verified purchase",
+      "Seller is registered as a Business-Verkäufer with German VAT ID and Chinese trade register number",
+      "ASIN currently ships via Amazon FBA (goods physically held in EU warehouses)"
+    ],
+    "against_authentic": [
+      "Identical product imagery confirmed on AliExpress at $6.59-$25.39 USD (vs Amazon €18.98)",
+      "Same imagery on DHgate, SHEIN, Made-in-China and Alibaba CDN - direct upstream factory evidence",
+      "Same product photography reused across multiple other Amazon ASINs under different brand strings",
+      "Brand 'ZWDC' has no discoverable official website - random-letter shell-brand pattern",
+      "Seller name '❥50%~80% Rabatt, Überraschung Ladens❥' violates Amazon naming policy (emoji + promotional text)",
+      "Hersteller and Modellnummer fields both literally say 'Damen Bademode' - no real manufacturer",
+      "Seller catalog of 558 SKUs incoherently spans bikinis, fleece jackets, push-up bras, yoga pants, rain ponchos - generic CN dropship pattern",
+      "Seller reputation 3.9/5 lifetime, 71% positive 12m, 23% one-star (vs 95%/4.5+ baseline)",
+      "Recent 1-star feedback describes return-fraud (item never refunded after return)",
+      "All hi-res images have EXIF metadata fully stripped (0 tags) - scraped supplier portal origin",
+      "Listing is 51 days old with single two-word ('Sehr schön') 5-star review - fresh-ASIN incentivized-seed pattern",
+      "26-word German keyword-stuffed title; classic CN-Amazon SEO listing"
+    ]
+  },
+  "recommendations": [
+    "DO NOT PURCHASE - cross-platform image match plus shell-brand and seller-quality signals indicate this is dropshipped generic Chinese swimwear, not a branded ZWDC product",
+    "If size/style is wanted, source the same template directly from AliExpress at $6.59-$25.39 - same product, fraction of the price",
+    "If already purchased and item is unsuitable, expect potential return friction (recent buyer feedback describes refund-withholding); document everything and use Amazon A-to-z Guarantee Claim if seller is unresponsive",
+    "Report the listing to Amazon for: (a) seller naming policy violation (emoji + discount claim in storefront name), (b) misleading manufacturer/model fields, (c) potential trademark/IP via brand registry if 'ZWDC' is squatting on any registered mark",
+    "For Amazon brand-protection teams: this seller (A1IBHILCAX8EI9) and its 558-SKU catalog warrant network-level investigation for the wider CN dropship cluster"
+  ],
+  "sources": [
+    "products/B0GQDB5Y1J_listing.json",
+    "reviews/B0GQDB5Y1J_analysis.json",
+    "images/B0GQDB5Y1J_forensics.json",
+    "sellers/A1IBHILCAX8EI9_profile.json",
+    ".claude/skills/counterfeit-methodology/SKILL.md",
+    ".claude/skills/amazon-patterns/SKILL.md"
+  ],
+  "investigation_date": "2026-04-18",
+  "analyzed_at": "2026-04-18"
+}
