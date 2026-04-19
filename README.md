@@ -25,12 +25,14 @@ This project uses a multi-agent architecture powered by **Claude Code** to analy
 
 ## Platforms
 
-| Platform | Command | Product ID |
-|----------|---------|------------|
-| Amazon (all TLDs: .com, .de, .co.uk, ...) | `/investigate [ASIN]` | `B08TMTFR6B` |
-| OTTO.de | `/investigate [article-number]` | `1789019591` |
+**Just paste the product link.** You don't have to extract an ASIN or article number by hand — `/investigate` accepts the raw product URL and parses the ID for you. Plain IDs still work if you have them.
 
-A single `/investigate` command auto-detects the platform from the input. All Amazon TLDs are supported.
+| Platform | Command | Accepts |
+|----------|---------|---------|
+| Amazon (all TLDs: .com, .de, .co.uk, .fr, ...) | `/investigate [input]` | Product URL (e.g. `https://www.amazon.de/dp/B08TMTFR6B`) **or** ASIN (`B08TMTFR6B`) |
+| OTTO.de | `/investigate [input]` | Product URL (e.g. `https://www.otto.de/p/...1789019591/`) **or** article number (`1789019591`) |
+
+A single `/investigate` command auto-detects the platform from the input (URL host or ID shape). All Amazon TLDs are supported.
 
 ---
 
