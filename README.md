@@ -38,7 +38,7 @@ A single `/investigate` command auto-detects the platform from the input (URL ho
 
 ## Why I built this
 
-For years I worked in **Fraud Management at OTTO Group** in Hamburg — one of Europe's largest e-commerce retailers — on the team responsible for detecting non-compliant and counterfeit sellers on the OTTO marketplace.
+I have worked at **OTTO Group** in Hamburg — one of Europe's largest e-commerce retailers — on a project with the team responsible for detecting non-compliant and counterfeit sellers on the OTTO marketplace.
 
 The process back then:
 
@@ -47,7 +47,7 @@ The process back then:
 - **Reactive** — most counterfeit detection happened *after* a brand holder complained, not before a customer was deceived.
 - **Costly** — every deep investigation was hours of human labor plus vendor fees, which made scaling across tens of thousands of sellers economically impossible.
 
-What we built worked, but it did not scale with the marketplace. Every new seller cohort meant more headcount or a bigger vendor bill. And non-compliance at OTTO was rarely *only* about counterfeit — it was child-labor supply chains surfacing in audits, extremist or Nazi iconography drifting into catalogs, animal-cruelty flags, sanctioned entities trying to onboard through shell companies. Each of those categories was a separate human investigation.
+What we built worked, but it did not scale with the marketplace. Every new seller cohort meant more headcount or a bigger vendor bill. Non-compliant Seller on Marketplaces were rarely *only* about counterfeit — it is child-labor supply chains surfacing in audits, extremist or Nazi iconography drifting into catalogs, animal-cruelty flags, sanctioned entities trying to onboard through shell companies. Each of those categories was and is a separate human investigation.
 
 Two things have changed since then: the academic literature on counterfeit detection matured (see [Scientific Foundation](#scientific-foundation)), and AI agents became good enough to *read* a listing page, reverse-search its images across AliExpress and DHgate, run German-language review NLP, and cross-check seller registrations — all in the same reasoning session, for cents per listing.
 
@@ -96,6 +96,39 @@ python3 generate_report.py B08TMTFR6B
 python3 validate_otto_verdict.py 1789019591
 python3 generate_otto_report.py 1789019591
 ```
+
+---
+
+## What you get
+
+Every investigation produces a **standalone HTML report you can open in any browser** — no server, no dependencies, no dashboard to configure. Just a single file that tells the story of the listing in plain language.
+
+The report includes, all on one page:
+
+- **Headline verdict** — `LIKELY AUTHENTIC` / `UNCERTAIN` / `LIKELY COUNTERFEIT` plus a composite-score gauge and risk category.
+- **Evidence for / against authenticity** — two side-by-side lists so you can see the trade-off at a glance.
+- **Top risk flags** — each with a severity pill (HIGH / MEDIUM / LOW) and a one-line reason citing the underlying signal.
+- **Scored signal breakdown** — weights, values, and contributions per signal (for the analyst / auditor who wants the math).
+- **Seller profile + ethics-checklist outcome** — KYB findings, seller metrics, and which prohibited-practices entries fired.
+- **Buying recommendation** — plain-language guidance and any alternatives.
+- **Sources** — every underlying JSON artifact is referenced so findings are traceable.
+
+Alongside the HTML, you also get a **machine-readable `verdict.json`** (schema-validated) — audit-ready, DSA-notice-exportable, and easy to ingest into dashboards or downstream pipelines.
+
+| Artifact | Path | For whom |
+|---|---|---|
+| HTML report | `verdicts/{ASIN}_report.html` | Humans — analysts, buyers, compliance teams |
+| Structured verdict | `verdicts/{ASIN}_verdict.json` | Machines — audit trails, trusted-flagger notices, dashboards |
+| Per-agent artifacts | `products/` · `reviews/` · `images/` · `sellers/` | Deep-dive traceability |
+
+### Sample report
+
+A real investigation of Amazon.de ASIN `B0GQDB5Y1J` (a €19 tankini listed under the shell brand "ZWDC") is bundled in the repo so you can see the exact output without running anything:
+
+- 👀 **Live render in your browser:** [B0GQDB5Y1J_report.html (via htmlpreview)](https://htmlpreview.github.io/?https://github.com/PAST2212/fake-product-detector/blob/main/docs/samples/B0GQDB5Y1J_report.html)
+- 📁 **Source files:** [`docs/samples/B0GQDB5Y1J_report.html`](docs/samples/B0GQDB5Y1J_report.html) · [`docs/samples/B0GQDB5Y1J_verdict.json`](docs/samples/B0GQDB5Y1J_verdict.json)
+
+Verdict: **LIKELY COUNTERFEIT · composite score 0.85 · risk HIGH.** The full story behind this case is in [docs/medium-article.md](docs/medium-article.md).
 
 ---
 
@@ -269,18 +302,6 @@ This project maps to those obligations out of the box:
 | Trusted-flagger notice inputs (Art. 22) | Verdict JSON — structured evidence + citations, export-ready |
 | Audit trail & explainability | `validate_verdict.py` + HTML report — every flag cites its signal and source |
 | Scope beyond counterfeit (labor / sanctions / environmental) | `config/seller-ethics-checklist.yaml` — 18 built-in checks + `custom_checks:` |
-
----
-
-## Limitations
-
-- **Pre-purchase analysis** is based on listing data only — post-purchase physical verification is required for confirmation
-- **Published accuracy** (83–97%) is dataset-specific; real-world performance varies by category and market
-- **Ground truth is noisy** — expert annotators disagree ~40% of the time on what counts as "suspicious" (Soldner, 2023)
-- **Counterfeiters evolve** — sophisticated operations adapt to evade detection
-- **Image generation AI** may eventually evade perceptual hashing
-
-> This tool provides **risk indicators**, not definitive authenticity judgments. Always verify through official channels when possible.
 
 ---
 

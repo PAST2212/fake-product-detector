@@ -33,7 +33,9 @@
       "Bash(mkdir -p hooktest/verdicts)",
       "Bash(cd hooktest *)",
       "Bash(:)",
-      "Bash(git -C /home/paddy/fake-product-detector status --short)"
+      "Bash(git -C /home/paddy/fake-product-detector status --short)",
+      "Bash(git -C /home/paddy/fake-product-detector ls-files verdicts/)",
+      "Bash(git -C /home/paddy/fake-product-detector check-ignore verdicts/B0GQDB5Y1J_report.html)"
     ]
   },
   "mcpServers": {}
