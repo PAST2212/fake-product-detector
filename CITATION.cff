@@ -1,0 +1,60 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Fake Product Detector"
+version: 1.0.0
+date-released: 2024-01-01
+url: "https://github.com/PAST2212/fake-product-detector"
+authors:
+  - name: "Patrick H."
+    affiliation: "OTTO Group - Fraud Management"
+abstract: >
+  An AI-powered multi-agent system for detecting counterfeit products 
+  on online marketplaces. Combines NLP, computer vision, and network 
+  analysis with research-backed feature weighting validated by 
+  peer-reviewed publications.
+keywords:
+  - counterfeit-detection
+  - fraud-detection
+  - amazon
+  - e-commerce
+  - nlp
+  - image-forensics
+license: MIT
+repository-code: "https://github.com/PAST2212/fake-product-detector"
+references:
+  - type: article
+    title: "Identification and Impact of Online Deceptive Counterfeit Products: Evidence from Amazon"
+    authors:
+      - familyNames: ["Cao"]
+        givenNames: ["Ziyi"]
+      - familyNames: ["Dewan"]
+        givenNames: ["Sanjeev"]
+      - familyNames: ["Lin"]
+        givenNames: ["Jinan"]
+    year: 2022
+    url: "https://ssrn.com/abstract=4398423"
+  - type: article
+    title: "Identify Counterfeit Product Reviews or AI Text by Bots on E-commerce Websites"
+    authors:
+      - familyNames: ["Massey"]
+        givenNames: ["Avis"]
+    year: 2023
+    institution: "National College of Ireland"
+  - type: article
+    title: "Deep learning-based online counterfeit-seller detection"
+    authors:
+      - familyNames: ["Cheung"]
+        givenNames: ["C."]
+      - familyNames: ["She"]
+        givenNames: ["J."]
+      - familyNames: ["Liu"]
+        givenNames: ["L."]
+    year: 2018
+  - type: book
+    title: "Combating online consumer fraud and counterfeits: A data science perspective"
+    authors:
+      - familyNames: ["Soldner"]
+        givenNames: ["Felix David"]
+    year: 2023
+    institution: "University College London"

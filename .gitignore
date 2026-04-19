@@ -1,0 +1,44 @@
+# Data outputs (regenerate each run)
+products/
+reviews/
+images/
+sellers/
+verdicts/
+search/
+scraped/
+
+# OTTO outputs
+otto-products/
+otto-reviews/
+otto-images/
+otto-sellers/
+otto-verdicts/
+
+# Research PDFs (not for commit)
+*.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+*.pyc
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+
+# IDE
+.idea/
+
+# Claude Code
+/CLAUDE.local.md
+.hook-errors.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Windows / WSL (NTFS alternate data streams)
+*:Zone.Identifier

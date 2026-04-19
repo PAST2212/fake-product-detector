@@ -1,0 +1,260 @@
+# Seller Ethics Checklist Configuration
+# Used by the seller-investigator and otto-seller-investigator agents
+# to flag sellers involved with prohibited practices.
+#
+# ADD YOUR OWN CHECKS HERE — this file is for your personal/proprietary criteria.
+# The file path is loaded by both Amazon and OTTO seller investigators.
+#
+# Each entry has:
+#   - id:        unique identifier
+#   - category:  broad category of violation
+#   - search_terms: list of strings — OR logic, ANY term in combination with the
+#                   seller name appearing in search results triggers the flag
+#   - severity:  HIGH | MEDIUM | LOW
+#   - description: human-readable description of what this checks
+#   - sources:   optional list of {name, url} dicts. `url` is null when the
+#                source is a non-web reference (agency name, report title, etc.)
+
+checklist:
+
+  # ─── Human Rights Violations ──────────────────────────────────────────────
+
+  - id: child_labor
+    category: Human Rights
+    severity: HIGH
+    description: Seller or brand implicated in child labor practices
+    search_terms:
+      - "child labor"
+      - "child labour"
+      - "child workers"
+      - "underage workers"
+      - "Ausbeutung von Kindern"
+    sources:
+      - { name: "International Labour Organization", url: "https://www.ilo.org" }
+      - { name: "United Nations — International Law", url: "https://www.un.org/law" }
+
+  - id: forced_labor
+    category: Human Rights
+    severity: HIGH
+    description: Supply chain linked to forced or slave labor
+    search_terms:
+      - "forced labor"
+      - "forced labour"
+      - "slave labor"
+      - "Zwangsarbeit"
+      - "Sklaverei"
+      - "Uiguren Zwangsarbeit"
+      - "Xinjiang forced labor"
+    sources:
+      - { name: "International Labour Organization", url: "https://www.ilo.org" }
+      - { name: "CBP Region-wide withhold release orders", url: null }
+
+  - id: wage_theft
+    category: Human Rights
+    severity: MEDIUM
+    description: Evidence of wage theft or labor exploitation complaints
+    search_terms:
+      - "wage theft"
+      - "unpaid wages"
+      - "labor exploitation"
+      - "Lohndiebstahl"
+      - "Arbeitsausbeutung"
+
+  # ─── Ideological / Political ───────────────────────────────────────────────
+
+  - id: extremist_ideology
+    category: Ideological
+    severity: HIGH
+    description: Seller linked to extremist, Nazi, or extremist-adjacent ideology
+    search_terms:
+      - "Nazi"
+      - "Neonazi"
+      - "Rechtsextrem"
+      - "Nazi memorabilia"
+      - "white supremacist"
+      - "extremist ideology"
+      - "Volksverhetzung"
+    sources:
+      - { name: "German Verfassungsschutz reports", url: null }
+
+  - id: anti_democracy
+    category: Ideological
+    severity: HIGH
+    description: Seller linked to anti-democratic or authoritarian movements
+    search_terms:
+      - "anti-democratic"
+      - "Reichsbürger"
+      - "Self-publisher extremist"
+      - "QAnon"
+
+  - id: hate_speech
+    category: Ideological
+    severity: HIGH
+    description: Seller engaged in hate speech or discrimination
+    search_terms:
+      - "hate speech"
+      - "Hassrede"
+      - "discrimination"
+
+  # ─── Animal Abuse / Animal Welfare ─────────────────────────────────────────
+
+  - id: animal_cruelty
+    category: Animal Welfare
+    severity: HIGH
+    description: Seller or brand linked to animal cruelty or testing
+    search_terms:
+      - "animal cruelty"
+      - "animal testing"
+      - "Tierquälerei"
+      - "Tierversuche"
+      - "animal abuse"
+    sources:
+      - { name: "PETA investigation records", url: null }
+      - { name: "Humane Society International", url: null }
+
+  - id: exotic_leather
+    category: Animal Welfare
+    severity: MEDIUM
+    description: Products from endangered species or exotic animal leather
+    search_terms:
+      - "exotic leather"
+      - "crocodile leather"
+      - "python leather"
+      - "endangered species"
+
+  - id: fur_trade
+    category: Animal Welfare
+    severity: MEDIUM
+    description: Seller linked to fur industry or live-skinning practices
+    search_terms:
+      - "fur trade"
+      - "real fur"
+      - "Pelz"
+      - "Kunspelz"
+
+  # ─── Environmental ─────────────────────────────────────────────────────────
+
+  - id: deforestation
+    category: Environmental
+    severity: MEDIUM
+    description: Supply chain linked to deforestation (e.g. palm oil, soy, timber)
+    search_terms:
+      - "deforestation"
+      - "illegal logging"
+      - "palm oil deforestation"
+      - "Rodung"
+      - "Entwaldung"
+    sources:
+      - { name: "Rainforest Foundation", url: null }
+      - { name: "WWF", url: null }
+
+  - id: illegal_mining
+    category: Environmental
+    severity: MEDIUM
+    description: Products linked to illegal mining or extractive industries
+    search_terms:
+      - "illegal mining"
+      - "conflict minerals"
+      - "cobalt mining"
+      - "tantalum"
+
+  - id: counterfitting_packaging_waste
+    category: Environmental
+    severity: LOW
+    description: Excessive or non-recyclable packaging associated with counterfeit operations
+    search_terms:
+      - "excessive packaging waste"
+      - "counterfeit packaging pollution"
+
+  # ─── Counterfeit-Specific ─────────────────────────────────────────────────
+
+  - id: counterfeit_operation
+    category: Counterfeit
+    severity: HIGH
+    description: Confirmed counterfeit product operation
+    search_terms:
+      - "counterfeit operation"
+      - "fake products"
+      - "Fälschung"
+      - "Plagiat"
+    sources:
+      - { name: "CBP seizure records", url: null }
+      - { name: "Amazon counterfeit reports", url: null }
+
+  - id: piracy
+    category: Counterfeit
+    severity: HIGH
+    description: Seller engaged in piracy (digital or physical)
+    search_terms:
+      - "piracy"
+      - "pirated goods"
+      - "copyright infringement"
+      - "Urheberrechtsverletzung"
+
+  # ─── Sanctions / Legal ────────────────────────────────────────────────────
+
+  - id: sanctions_list
+    category: Legal / Sanctions
+    severity: HIGH
+    description: Seller or parent company on trade sanctions list
+    search_terms:
+      - "OFAC sanctions"
+      - "EU sanctions list"
+      - "UN sanctions"
+      - "sanctions list"
+    sources:
+      - { name: "OFAC SDN list", url: "https://sanctionssearch.ofac.treas.gov" }
+      - { name: "EU consolidated sanctions list", url: "https://www.sanctionsmap.eu" }
+
+  - id: trademark_infringement
+    category: Legal
+    severity: MEDIUM
+    description: Repeated trademark infringement findings
+    search_terms:
+      - "trademark infringement"
+      - "Markenrechtsverletzung"
+      - "brand impersonation"
+
+  # ─── Fraud ─────────────────────────────────────────────────────────────────
+
+  - id: scam_seller
+    category: Fraud
+    severity: HIGH
+    description: Confirmed scam seller or fraudulent operation
+    search_terms:
+      - "scam seller"
+      - "Betrug"
+      - "scam"
+      - "fraud"
+    sources:
+      - { name: "BBB complaint records", url: "https://www.bbb.org" }
+      - { name: "Trustpilot fraud reports", url: "https://www.trustpilot.com" }
+
+  - id: fake_reviews_scheme
+    category: Fraud
+    severity: HIGH
+    description: Seller participates in fake review manipulation schemes
+    search_terms:
+      - "fake review scheme"
+      - "review manipulation"
+      - "Bewertungsmanipulation"
+      - "fake reviews"
+    sources:
+      - { name: "Fakespot", url: "https://www.fakespot.com" }
+      - { name: "ReviewMeta", url: "https://reviewmeta.com" }
+
+# ─── Custom Entries ────────────────────────────────────────────────────────────
+# Add your own entries below. They override or extend the defaults above.
+# Copy the same YAML structure from any entry above.
+
+custom_checks: []
+
+# ─── Notes ─────────────────────────────────────────────────────────────────────
+# How this works:
+# 1. The seller-investigator reads this file at the start of every investigation
+# 2. For each checklist entry, it runs a WebSearch for the seller name combined
+#    with each search term (OR logic — one query per term)
+# 3. If ANY term yields corroborating results linking the seller to that
+#    practice, the entry is flagged
+# 4. All flags are aggregated into an ethics_risk section in the seller profile
+# 5. Severity of the worst flag determines the overall ethics risk level

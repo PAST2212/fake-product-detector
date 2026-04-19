@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.amazon.com)",
+      "WebFetch(domain:www.amazon.co.uk)",
+      "WebFetch(domain:www.amazon.de)",
+      "WebFetch(domain:sellercentral.amazon.de)",
+      "WebFetch(domain:www.google.com)",
+      "WebFetch(domain:www.bing.com)",
+      "WebFetch(domain:www.trustpilot.com)",
+      "WebFetch(domain:www.fakespot.com)",
+      "WebFetch(domain:reviewmeta.com)",
+      "WebFetch(domain:camelcamelcamel.com)",
+      "WebFetch(domain:www.camelcamelcamel.com)",
+      "WebFetch(domain:keepa.com)",
+      "WebFetch(domain:www.keepa.com)",
+      "WebFetch(domain:www.barcodelookup.com)",
+      "WebFetch(domain:api.rainforestapi.com)",
+      "WebFetch(domain:yandex.com)",
+      "WebFetch(domain:www.aliexpress.com)",
+      "WebFetch(domain:duckduckgo.com)",
+      "WebFetch(domain:html.duckduckgo.com)",
+      "Bash(mkdir -p *)",
+      "Bash(python3 *)",
+      "Bash(pip show *)",
+      "Bash(.venv/bin/python -m pytest tests/ -v)",
+      "Bash(.venv/Scripts/python.exe -m pytest tests/ -v)",
+      "Bash(echo \"exit=$?\")",
+      "Bash(TOOL_OUTPUT_PATH=/tmp/nonexistent.json python3 /home/paddy/fake-product-detector/.claude/hooks/validate-output.py)",
+      "Bash(set -e cd /tmp)",
+      "Bash(rm -rf hooktest)",
+      "Bash(mkdir -p hooktest/verdicts)",
+      "Bash(cd hooktest *)",
+      "Bash(:)",
+      "Bash(git -C /home/paddy/fake-product-detector status --short)"
+    ]
+  },
+  "mcpServers": {}
+}

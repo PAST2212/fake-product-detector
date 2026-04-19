@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Verdict Card — ASIN B0GQDB5Y1J</title>
+<style>
+  :root {
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --danger: #dc2626;
+    --danger-soft: #fee2e2;
+    --warn: #d97706;
+    --warn-soft: #fef3c7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 48px;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    width: 1200px;
+  }
+  .card {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 40px 44px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+  }
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 28px;
+    align-items: center;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+  }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 700;
+  }
+  h1 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin: 10px 0 12px;
+    font-weight: 800;
+  }
+  .meta { color: var(--muted); font-size: 14px; }
+  .meta b { color: var(--ink); }
+  .verdict-pill {
+    display: inline-block;
+    padding: 6px 14px;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    border-radius: 999px;
+    background: var(--danger-soft);
+    color: var(--danger);
+    margin-top: 6px;
+  }
+
+  /* Gauge */
+  .gauge {
+    text-align: center;
+  }
+  .gauge svg { width: 260px; height: 160px; }
+  .gauge .score {
+    font-size: 48px;
+    font-weight: 800;
+    margin-top: -8px;
+    color: var(--danger);
+  }
+  .gauge .label {
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  /* Stat row */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 28px 0;
+  }
+  .stat {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 18px;
+  }
+  .stat .k {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 700;
+  }
+  .stat .v {
+    font-size: 24px;
+    font-weight: 800;
+    margin-top: 6px;
+  }
+  .stat.red .v { color: var(--danger); }
+
+  /* Risk flags */
+  h2 {
+    margin: 24px 0 12px;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .flag {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--border);
+    align-items: start;
+  }
+  .flag:last-child { border-bottom: 0; }
+  .sev {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding: 3px 10px;
+    border-radius: 999px;
+    text-align: center;
+  }
+  .sev.HIGH { background: var(--danger-soft); color: var(--danger); }
+  .sev.MEDIUM { background: var(--warn-soft); color: var(--warn); }
+  .flag-body .name {
+    font-weight: 700;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 13px;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+  .flag-body .detail {
+    font-size: 14px;
+    color: #334155;
+    line-height: 1.45;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+
+  <div class="header">
+    <div>
+      <div class="eyebrow">Counterfeit verdict · Amazon.de · ASIN B0GQDB5Y1J</div>
+      <h1>ZWDC Bikini Set Damen Zweiteilig V-Ausschnitt Raffung Badeanzug…</h1>
+      <div class="meta">
+        Seller <b>ZWDC ❥50%~80% Rabatt, Überraschung Ladens❥</b> (Shenzhen) ·
+        FBM dropship · ASIN age <b>51 days</b> · Listed price <b>€18.98</b>
+      </div>
+      <span class="verdict-pill">LIKELY COUNTERFEIT · RISK HIGH</span>
+    </div>
+
+    <div class="gauge">
+      <svg viewBox="0 0 200 120">
+        <!-- background arc -->
+        <path d="M20,110 A80,80 0 0,1 180,110" fill="none" stroke="#e2e8f0" stroke-width="18" stroke-linecap="round"/>
+        <!-- score arc: 0.85 of 180° = 153° -->
+        <path d="M20,110 A80,80 0 1,1 174.93,78.70" fill="none" stroke="#dc2626" stroke-width="18" stroke-linecap="round"/>
+      </svg>
+      <div class="score">0.85</div>
+      <div class="label">Composite score</div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat red">
+      <div class="k">Verdict</div>
+      <div class="v">COUNTERFEIT</div>
+    </div>
+    <div class="stat red">
+      <div class="k">Risk</div>
+      <div class="v">HIGH</div>
+    </div>
+    <div class="stat">
+      <div class="k">Confidence</div>
+      <div class="v">0.85</div>
+    </div>
+    <div class="stat">
+      <div class="k">Image-match prob.</div>
+      <div class="v">0.92</div>
+    </div>
+  </div>
+
+  <h2>Top risk flags</h2>
+
+  <div class="flag">
+    <span class="sev HIGH">HIGH</span>
+    <div class="flag-body">
+      <div class="name">cross_platform_image_match_aliexpress_dhgate_shein</div>
+      <div class="detail">Identical product imagery on AliExpress ($6.59–$25.39), DHgate, SHEIN, Made-in-China and Alibaba CDN — near-definitive dropship/counterfeit signal.</div>
+    </div>
+  </div>
+
+  <div class="flag">
+    <span class="sev HIGH">HIGH</span>
+    <div class="flag-body">
+      <div class="name">image_reused_across_amazon_asins</div>
+      <div class="detail">Same product photography appears under multiple Amazon ASINs with different brand strings — listing-template reuse pattern.</div>
+    </div>
+  </div>
+
+  <div class="flag">
+    <span class="sev HIGH">HIGH</span>
+    <div class="flag-body">
+      <div class="name">shell_brand_no_official_site</div>
+      <div class="detail">"ZWDC" has no discoverable official website; random-letter naming is consistent with shell-brand dropship sellers.</div>
+    </div>
+  </div>
+
+  <div class="flag">
+    <span class="sev HIGH">HIGH</span>
+    <div class="flag-body">
+      <div class="name">manufacturer_field_is_generic_keyword</div>
+      <div class="detail">Hersteller and Modellnummer both literally say "Damen Bademode" (German for "women's swimwear") — no real manufacturer.</div>
+    </div>
+  </div>
+
+  <div class="flag">
+    <span class="sev HIGH">HIGH</span>
+    <div class="flag-body">
+      <div class="name">incoherent_558_sku_catalog</div>
+      <div class="detail">Seller catalog spans bikinis, fleece jackets, push-up bras, yoga pants, rain ponchos — one-supplier-many-categories CN dropship pattern.</div>
+    </div>
+  </div>
+
+  <div class="flag">
+    <span class="sev MEDIUM">MEDIUM</span>
+    <div class="flag-body">
+      <div class="name">buyer_return_fraud_complaints</div>
+      <div class="detail">Recent 1-star feedback describes item kept, no refund issued, buyer pays return shipping — classic CN dropship return-fraud signature.</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
