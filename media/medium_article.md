@@ -4,14 +4,6 @@
 
 ---
 
-> **TL;DR**
-> - **What it does.** One command (`/investigate`) orchestrates five specialist AI agents across Amazon and OTTO.de — listing, reviews, images, seller, ethics — and emits a cited, schema-validated counterfeit verdict plus an HTML report.
-> - **What it costs.** Roughly 200,000 tokens per full investigation. Cents per listing at scale.
-> - **What it caught.** A €19 Amazon.de tankini with identical photography live on AliExpress ($6.59), DHgate, SHEIN, and Alibaba. Composite score 0.85, **LIKELY COUNTERFEIT**, risk **HIGH** — in 12 minutes.
-> - **Why it matters now.** Under EU Digital Services Act Article 30, marketplaces must prove reasonable efforts against counterfeit listings. This is that proof, runnable per listing, grounded in four peer-reviewed papers, and MIT-licensed.
-
----
-
 ## A €19 tankini on Amazon.de
 
 Recently I ran my detector against this listing on amazon.de:
