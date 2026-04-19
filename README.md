@@ -2,7 +2,7 @@
 
 # Fake Product Detector
 
-**An AI-powered multi-agent system for detecting counterfeit products on Amazon and OTTO.de marketplaces**
+**A ClaudeCode based, AI-powered multi-agent system for detecting counterfeit products on Amazon and OTTO.de marketplaces**
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-Required-yellow.svg)
