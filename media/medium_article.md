@@ -312,16 +312,10 @@ If you run a marketplace, work in fraud or trust-and-safety, or are building sim
 
 ## About the author
 
-**Patrick H.** — based in Hamburg, Germany. Spent years on the **Fraud Management** team at **OTTO Group**, one of Europe's largest e-commerce retailers, working on non-compliant and counterfeit seller detection on the OTTO marketplace. Builds AI-driven fraud, trust, and compliance tooling.
-
-Open to:
-- Conversations with marketplaces, brand-protection teams, and trust-and-safety groups working on DSA Article 30 compliance.
-- Collaborations with academics on counterfeit-detection ground truth and evaluation.
-- Consulting, pilots, and co-development of detection pipelines for EU-operating marketplaces.
+**Patrick Steinhoff** — based in Flensburg, Germany. Over the past years I've worked on Online Brand Protection and Cyber Threat Intelligence Projects accross different roles and companies.
 
 **Reach me:**
-- 📧 **paddyshomie@gmail.com**
-- 💼 **LinkedIn:** `https://www.linkedin.com/in/<your-handle>` *(replace before publishing)*
-- 💻 **GitHub:** [PAST2212/fake-product-detector](https://github.com/PAST2212/fake-product-detector)
+- **LinkedIn:** `https://www.linkedin.com/in/patrick-steinhoff-168892222/*
+- **GitHub:** [PAST2212/fake-product-detector](https://github.com/PAST2212/fake-product-detector)
 
-*This project is personal work, released under the MIT License, and is not affiliated with, endorsed by, or representative of OTTO GmbH or OTTO Group.*
+*This project is released under the MIT License*
