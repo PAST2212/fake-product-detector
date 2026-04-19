@@ -128,7 +128,7 @@ A real investigation of Amazon.de ASIN `B0GQDB5Y1J` (a €19 tankini listed unde
 - 👀 **Live render in your browser:** [B0GQDB5Y1J_report.html](https://htmlpreview.github.io/?https://github.com/PAST2212/fake-product-detector/blob/master/media/samples/B0GQDB5Y1J_report.html)
 - 📁 **Source files:** [`media/samples/B0GQDB5Y1J_report.html`](media/samples/B0GQDB5Y1J_report.html) · [`media/samples/B0GQDB5Y1J_verdict.json`](media/samples/B0GQDB5Y1J_verdict.json)
 
-Verdict: **LIKELY COUNTERFEIT · composite score 0.85 · risk HIGH.** The full story behind this case is in [media/medium-article.md](media/medium-article.md).
+Verdict: **LIKELY COUNTERFEIT · composite score 0.85 · risk HIGH.** The full story behind this case is in [media/medium_article.md](media/medium_article.md).
 
 ---
 
