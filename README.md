@@ -11,16 +11,6 @@
 
 ---
 
-> ### A €19 tankini on Amazon.de
->
-> Ran `/investigate` against a listing. Twelve minutes later:
->
-> **LIKELY COUNTERFEIT · composite score 0.85 · risk HIGH.** Identical product photography was live on AliExpress at **$6.59**, on DHgate, on SHEIN, and on Alibaba. The "ZWDC" brand had no website. The manufacturer field literally read *"Damen Bademode"* (German for "women's swimwear"). Five specialist AI agents surfaced all of it for ≈200,000 tokens — **cents per listing at scale**.
->
-> Full write-up: **[docs/medium-article.md](docs/medium-article.md)** · Workflow diagram source: **[docs/workflow.mmd](docs/workflow.mmd)** · Feature map: **[docs/features.mmd](docs/features.mmd)**
-
----
-
 ## Overview
 
 This project uses a multi-agent architecture powered by **Claude Code** to analyze marketplace products for counterfeit indicators, combining:
@@ -304,24 +294,16 @@ Python is required only for the helper scripts (`validate_*.py`, `generate_*.py`
 
 ## Read more
 
-- 📰 **Full story** — [docs/medium-article.md](docs/medium-article.md)
-- 🧩 **Workflow diagram source** — [docs/workflow.mmd](docs/workflow.mmd) *(render at [mermaid.live](https://mermaid.live))*
-- 🗺️ **Feature map source** — [docs/features.mmd](docs/features.mmd)
-- 🖼️ **Hero evidence canvas** — [docs/hero-evidence.html](docs/hero-evidence.html) *(open in Chrome → full-page screenshot)*
-- 🧾 **Verdict summary card** — [docs/verdict-hero.html](docs/verdict-hero.html)
+- 📰 **Full story** — [media/medium-article.md](media/medium-article.md)
+- 🧩 **Workflow diagram source** — [media/workflow.png](media/workflow.png)
+- 🗺️ **Feature map source** — [media/features.png](media/features.png)
+- 🖼️ **Hero evidence canvas** — [media/hero-evidence.html](media/hero-evidence.html)
+- 🧾 **Verdict summary card** — [media/verdict-hero.html](media/verdict-hero.html)
 
 ---
 
 ## Author
-
-Built by **Patrick H.**, Hamburg — ex-OTTO Group Fraud Management.
-
-Open to conversations with marketplaces, brand-protection teams, trust-and-safety groups, and academics working on counterfeit detection or DSA Article 30 compliance.
-
-- 📧 paddyshomie@gmail.com
-- 💻 [github.com/PAST2212](https://github.com/PAST2212)
-
-*This project is personal work, released under the MIT License, and is not affiliated with, endorsed by, or representative of OTTO GmbH or OTTO Group.*
+Patrick Steinhoff - [LinkedIn](https://www.linkedin.com/in/patrick-steinhoff-168892222/)
 
 ---
 
