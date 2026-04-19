@@ -158,8 +158,6 @@ This is not "trust me" code. The weights, thresholds, and features are all groun
 
 4. **Soldner (2023) — *Combating online consumer fraud and counterfeits: A data science perspective*.** University College London. Multi-platform image matching as a near-definitive signal — the same image on AliExpress or DHgate at a lower price. Also contributed the sobering finding that **expert annotators disagree on "suspicious" labels about 40% of the time**, which is why my system caps confidence at 0.95 and ships an explicit UNCERTAIN verdict bucket.
 
-A `CITATION.cff` file in the repository lets you cite the tool itself, and `references:` inside it lists all four works.
-
 ### Verdict thresholds (also research-informed)
 
 | Composite score | Verdict | Confidence |
@@ -227,68 +225,6 @@ Let me walk through the tankini case from the intro, because it shows every tier
 
 ---
 
-## Embedding the verdict HTML in a Medium article
-
-This is a subtle point. **Medium does not support arbitrary HTML or `<iframe>` embeds** in posts — their editor strips custom styles and script for security. So you cannot literally paste `verdicts/B0GQDB5Y1J_report.html` into a Medium draft and have it render.
-
-Three things you *can* do:
-
-1. **Screenshot the report** and embed it as an image. Cleanest option. Take a full-page screenshot (in Chrome: DevTools → device toolbar → "Capture full size screenshot") and upload it like any image. Good for one hero visual per article.
-2. **Host the HTML on GitHub Pages and link to it.** Put `verdicts/B0GQDB5Y1J_report.html` in a `/reports/` directory, enable Pages on the repo, and link `https://<user>.github.io/<repo>/reports/B0GQDB5Y1J_report.html` from the article. Medium auto-renders the link as a clickable preview card.
-3. **Use a GitHub Gist for the verdict JSON.** Medium *does* natively embed Gists (paste the gist URL on its own line). Works great for showing the structured verdict data. The full HTML template is too big for a gist to be nice, but the JSON is perfect.
-
-For this article I would use **option 1 for the visual summary** (screenshot of the rendered report, maybe cropped to the headline gauge + risk flags table) and **option 3 for reproducibility** (gist the verdict JSON so readers can see the exact schema).
-
-If you want to publish the article on GitHub directly (a repo `README`, a GitHub Pages site, or an `ARTICLE.md` file), none of these limitations apply — GitHub renders inline HTML in Markdown, so the report can be linked or even iframe'd from a Pages site.
-
----
-
-## Token efficiency was not optional
-
-An earlier version of this system burned through an entire Claude Pro session on **one** investigation — not acceptable for anyone planning to open-source it. I had to redesign for token economy without hurting classification quality. What worked:
-
-- **Parallelism.** Four research agents fire in a single orchestrator message, not sequentially.
-- **Compact return contract.** Each subagent returns `{path, key_findings, flag_count}` — never raw HTML or review text. The artifact lives on disk; the orchestrator reads only the summary.
-- **`curl` + Python parse.** For HTML-heavy fetches, `curl -o file.html` followed by a targeted parse costs a fraction of `WebFetch` because the model never ingests the full page.
-- **No recursive fanout.** Leaf agents do not get the `Task` tool — they cannot spawn further subagents. This was a sneaky token sink in version one.
-- **Gated hooks.** The pre-prompt context-loader hook was unconditionally firing on every turn. Deleted.
-- **Skills, not inlined knowledge.** The 300-line scoring methodology used to live in the classifier's prompt. Now it lives in a skill file the classifier loads on demand.
-
-Post-redesign, a full investigation costs a small fraction of a single session.
-
----
-
-## Limitations — because science demands them
-
-- **Pre-purchase analysis only.** Physical verification still requires the product in hand.
-- **Published accuracies (83% Cao, 97% Massey) are dataset-specific.** Real-world performance varies by category, marketplace, and adversarial pressure.
-- **Ground truth is noisy** (40% expert disagreement per Soldner 2023). This is why I ship an explicit UNCERTAIN bucket instead of forcing a binary.
-- **Counterfeiters adapt.** Every public detection paper is also a roadmap for evasion.
-- **Image-generation AI** will eventually defeat perceptual hashing. The fix — embedding-based nearest-neighbor search over CLIP or similar — is on the roadmap.
-
----
-
-## What's next
-
-- **More marketplaces.** eBay Kleinanzeigen, Zalando, bol.com.
-- **CLIP-based image similarity** as a fallback when pHash fails on AI-regenerated imagery.
-- **Trusted-flagger integration.** Export DSA-compliant notices directly from a LIKELY COUNTERFEIT verdict.
-- **Batch mode.** Given a seller ID, investigate their full catalog in one pass and produce a seller-level verdict, not just a listing-level one.
-
----
-
-## Closing
-
-The OTTO fraud team in 2018 would have loved this. Not because it would have replaced anyone — counterfeit detection still needs human judgment on the edge cases — but because it would have **filtered 90% of the obvious garbage upstream**, freeing analysts to work on the genuinely hard 10%. That was the dream.
-
-Under DSA Article 30, it is now also the compliance baseline. Any marketplace operating in the EU is on the hook to *prove* they make reasonable efforts against counterfeit listings. Cheap, transparent, cited, and auditable AI detection — running per listing, end-to-end in one command — is how you get there.
-
-The full project is open source under the MIT License: **[github.com/PAST2212/fake-product-detector](https://github.com/PAST2212/fake-product-detector)**.
-
-If you run a marketplace, work in fraud or trust-and-safety, or are building similar tooling — I would love to hear from you.
-
----
-
 ### References
 
 - Cao, Z., Dewan, S., & Lin, J. (2022). *Identification and Impact of Online Deceptive Counterfeit Products: Evidence from Amazon.* SSRN. https://ssrn.com/abstract=4398423
@@ -297,8 +233,6 @@ If you run a marketplace, work in fraud or trust-and-safety, or are building sim
 - Soldner, F. D. (2023). *Combating online consumer fraud and counterfeits: A data science perspective.* University College London.
 - European Commission. *The Digital Services Act.* https://digital-strategy.ec.europa.eu/en/policies/digital-services-act
 - European Commission. *Digital Services Act, Article 30 — Traceability of traders.* https://www.eu-digital-services-act.com/Digital_Services_Act_Article_30.html
-
----
 
 ---
 

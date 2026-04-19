@@ -134,9 +134,13 @@ Verdict: **LIKELY COUNTERFEIT · composite score 0.85 · risk HIGH.** The full s
 
 ## Architecture
 
-### Investigation Pipeline
+### Investigation Workflow
 
 ![Investigation Workflow](media/workflow.png)
+
+### Features
+
+![Features](media/features.png)
 
 ### Agents
 
@@ -255,10 +259,10 @@ The scoring framework is based on peer-reviewed research:
 
 | Study | Key Finding | Applied As |
 |-------|-------------|------------|
-| Cao et al. (2022) | Random Forest 83% accuracy | Fake topic NLP, rating distribution |
-| Cheung et al. (2018) | Image networks +60% improvement | pHash cross-matching |
-| Massey (2023) | BERT 97% on fake reviews | Sentiment mismatch, duplicate clustering |
-| Soldner (2023) | Cross-platform matching | Image forensics, gray market detection |
+| Cao, Dewan & Lin (2022) — Identification and Impact of Online Deceptive Counterfeit Products: Evidence from Amazon | Random Forest 83% accuracy | Fake topic NLP, rating distribution |
+| Cheung, She & Liu (2018) — Deep learning-based online counterfeit-seller detection | Image networks +60% improvement | pHash cross-matching |
+| Massey (2023) — Identify Counterfeit Product Reviews or AI Text by Bots on E-commerce Websites | Sentiment mismatch, duplicate clustering |
+| Soldner (2023) — Combating online consumer fraud and counterfeits: A data science perspective | Cross-platform matching | Image forensics, gray market detection |
 
 ---
 
